@@ -1,10 +1,8 @@
-﻿using Domain.Utilities;
-using MediatR;
-
-namespace Application.Commands
+﻿namespace Domain.Entities
 {
-    public class AddProductCommand : IRequest<Response>
+    public class Product
     {
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
         public double Price { get; set; }

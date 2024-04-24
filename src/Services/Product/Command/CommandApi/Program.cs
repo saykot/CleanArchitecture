@@ -1,5 +1,9 @@
+using Application.CommandValidators;
+using FluentValidation;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseDefaultServiceProvider(configure => configure.ValidateOnBuild = true);
 // Add services to the container.
 
 builder.Services.AddControllers();
